@@ -17,6 +17,7 @@ html {
     --text-color: #ffffff;
     --primary-color: #ffb027;
     --card-bgc: #242734;
+    scroll-behavior: smooth;
 }
 body {
     background-color: var(--bgc);
@@ -292,15 +293,140 @@ body {
 }
 
 /*** PORTFOLIO ***/
-#portfolio {
+#project {
     margin-top: 2vw;
     margin-inline: 8vw;
     margin-bottom: 8vw;
     color: #ffffff;
 }
-.portfolio_tag {
+.project_tag {
     opacity: 0.6;
     font-weight: 400;
     font-size: 1rem;
     margin-bottom: 1vw;
+}
+.project_title {
+    font-size: 2rem;
+    font-weight: 500;
+    text-wrap: balance;
+    margin-bottom: 2vw;
+    text-transform: capitalize;
+    max-width: 20ch;
+}
+.project_descri {
+    font-size: 0.9rem;
+    text-wrap: balance;
+    opacity: 0.8;
+    margin-bottom: 2vw;
+    line-height: 1.6;
+    max-width: 60ch;
+}
+.project_link {
+    text-decoration: underline solid;
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 3vw;
+
+    & i {
+        margin-left: 1vw;
+    }
+}
+
+/* PRT Fini*/
+.prt-filter {
+    display: flex;
+    gap: 2vw;
+    align-items: baseline;
+    margin-bottom: 2vw;
+}
+.prt-filter_btn {
+    font-size: 1rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: 1px solid var(--primary-color);
+    border-radius: 5rem;
+    padding: 0.4em 1em 0.3em;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 200ms ease;
+
+    &.prt-filter_btn--active {
+        background-color: var(--primary-color);
+        font-weight: 600;
+    }
+
+    &:hover:not(.prt-filter_btn--active) {
+        background-color: rgba(255, 176, 39, 0.5);
+    }
+}
+
+.prt-fini-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 2vw;
+}
+.prt-fini_item {
+    position: relative;
+    min-width: 20vw;
+    aspect-ratio: 4/3;
+}
+.prt-fini_img {
+    display: inline-block;
+    width: 100%;
+    aspect-ratio: 4/2.5;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 0.4rem;
+    margin-bottom: 0.5vw;
+}
+
+@font-face {
+    font-family: "Font Awesome 6 Free";
+    src: url(fontawesome/webfonts/fa-solid-900.woff2);
+}
+.prt-fini_img--before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 4/2.5;
+    border-radius: 0.4rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent, transparent);
+    opacity: 0;
+    transition: 400ms ease;
+
+    &::before {
+        content: attr(data-title);
+        position: absolute;
+        bottom: 2vw;
+        left: 2vw;
+        font-size: 1.2rem;
+        font-weight: 600;
+        opacity: 0.6;
+        text-transform: capitalize;
+    }
+    &::after {
+        content: '\f06e';
+        font-family: "Font Awesome 6 Free";
+        font-size: 1.4rem;
+        opacity: 0.6;
+        position: absolute;
+        bottom: 2vw;
+        right: 2vw;
+        cursor: pointer;
+    }
+    &:hover {
+        opacity: 1;
+    }
+}
+.prt-fini_info {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.prt-fini_descri {
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0.6;
 }

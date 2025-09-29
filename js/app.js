@@ -11,9 +11,9 @@ let typewriter = new TypeIt(skill, {
     .pause(1500)
     .type("Je suis ")
     .pause(500)
-    .type("develloper, ")
+    .type("dévelloppeur, ")
     .pause(200)
-    .move(-6)
+    .move(-8)
     .delete(1)
     .move(null, { to: "END", delay: 200 })
     .pause(500)
@@ -48,9 +48,9 @@ const getLandingPage = function (parm) {
     switch (parm) {
         case 'services':
             landing = `<h4>_ ${parm}</h4>
-<h2>Ingénierie, design et conception Web</h2>
+<h2>Ingénierie, conception et développement Web</h2>
 <p>Je transforme la complexité en simplicité visuelle et fonctionnelle, construis des solutions élégantes et robustes. Explorer mes projects, mes outils, et mes idées.</p>
-<a href="#">My Story <i class="fa fa-arrow-right"></i></a>`
+<a href="#portfolio">My projects <i class="fa fa-arrow-right"></i></a>`
             break;
         case 'works':
             landing = `<h4>_ ${parm}</h4>
@@ -88,8 +88,9 @@ navLinks.forEach(link => link.addEventListener('click', (e) => {
 
 //* Hover cards
 const projectCards = document.querySelectorAll('.project-card')
+const projectS = document.getElementById('project-card')
 
-projectCards.forEach(card => card.addEventListener('mouseover', (e) => {
+projectCards.forEach(card => card.addEventListener('mouseover', () => {
     projectCards.forEach(c => c.classList.remove('project-card--active'))
     card.classList.add('project-card--active')
 }))
