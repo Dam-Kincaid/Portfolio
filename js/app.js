@@ -48,7 +48,7 @@ const getLandingPage = function (parm) {
     switch (parm) {
         case 'services':
             landing = `<h4>_ ${parm}</h4>
-<h2>Ingénierie, conception et développement Web</h2>
+<h2>Conception et <br>développement Web</h2>
 <p>Je transforme la complexité en simplicité visuelle et fonctionnelle, construis des solutions élégantes et robustes. Explorer mes projects, mes outils, et mes idées.</p>
 <a href="#">My ${parm} <i class="fa fa-arrow-right"></i></a>`
             break;
@@ -56,11 +56,11 @@ const getLandingPage = function (parm) {
             landing = `<h4>_ ${parm}</h4>
 <h2>Architecture front-end et optimisation</h2>
 <p>J'aime comprendre, construire, et partager. Mon univers: Open-source, les interfaces épurées, et les solutions bien pensées. Parcourez mon travails, et n'hésitez pas à me dire bonjour.</p>
-<a href="#portfolio">My ${parm} <i class="fa fa-arrow-right"></i></a>`
+<a href="#project">My ${parm} <i class="fa fa-arrow-right"></i></a>`
             break;
         case 'blog':
             landing = `<h4>_ ${parm}</h4>
-<h2>Ingénierie, design et conception Web</h2>
+<h2>Design et <br>conception Web</h2>
 <p>Je transforme la complexité en simplicité visuelle et fonctionnelle, construis des solutions élégantes et robustes. Explorer mes projects, mes outils, et mes idées.</p>
 <a href="#">My ${parm} <i class="fa fa-arrow-right"></i></a>`
             break;
@@ -93,4 +93,13 @@ const projectS = document.getElementById('project-card')
 projectCards.forEach(card => card.addEventListener('mouseover', () => {
     projectCards.forEach(c => c.classList.remove('project-card--active'))
     card.classList.add('project-card--active')
+}))
+
+
+// * PRT FILTER
+const filterBtn = document.querySelectorAll('.prt-filter_btn')
+
+filterBtn.forEach(btn => btn.addEventListener('click', (e) => {
+    e.preventDefault()
+    btn.classList.toggle('prt-filter_btn--active')
 }))
