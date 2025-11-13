@@ -392,10 +392,6 @@ body {
     margin-bottom: 0.5vw;
 }
 
-@font-face {
-    font-family: "Font Awesome 6 Free";
-    src: url(fontawesome/webfonts/fa-solid-900.woff2);
-}
 .prt-fini_img--before {
     position: absolute;
     top: 0;
@@ -416,9 +412,9 @@ body {
         text-transform: capitalize;
         transition: 400ms ease;
     }
-    &::after {
-        content: "\f06e";
+    .after {
         font-family: "Font Awesome 6 Free";
+        color: white;
         font-size: 1.4rem;
         opacity: 0;
         position: absolute;
@@ -430,7 +426,7 @@ body {
     &:hover {
         background: linear-gradient(to top, black, transparent);
         &::before,
-        &::after {
+        .after {
             opacity: 0.8;
         }
     }
@@ -483,7 +479,7 @@ body {
 
     &:hover {
         background-color: rgba(255, 255, 255, 0.2);
-        transform: scale(1.02);
+        transform: scale(1.05);
     }
 
     &::before {
@@ -491,6 +487,7 @@ body {
         text-transform: capitalize;
         font-weight: bold;
         font-size: 1.2rem;
+        color: var(--card-bgc);
         width: 100%;
         aspect-ratio: 16/5;
         position: absolute;
