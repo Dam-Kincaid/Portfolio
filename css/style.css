@@ -420,8 +420,8 @@ body {
         position: absolute;
         bottom: 1.6vw;
         right: 2vw;
-        cursor: pointer;
         transition: 400ms ease;
+        cursor: pointer;
     }
     &:hover {
         background: linear-gradient(to top, black, transparent);
