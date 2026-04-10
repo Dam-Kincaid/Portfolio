@@ -1,0 +1,31 @@
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.tl {
+    text-transform: uppercase;
+    color: #BBB;
+}
+.tlImg {
+    width: 2.2em;
+    height: 2.2em;
+    padding: 0.4em;
+    border-radius: 0.2em;
+    background-color: var(--card-bgc);
+}
+
+.me {
+    font-size: 1rem;
+    font-family: Inter-Italic;
+    font-style: italic;
+    margin-bottom: 0.6em;
+}
+.story {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-weight: 300;
+    letter-spacing: 1px;
+}

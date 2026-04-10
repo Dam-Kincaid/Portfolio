@@ -1,0 +1,32 @@
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+}
+.tl {
+    text-transform: uppercase;
+    color: #BBB;
+}
+.tlImg {
+    width: 2.2em;
+    height: 2.2em;
+    padding: 0.4em;
+    border-radius: 0.2em;
+    background-color: var(--card-bgc);
+}
+
+.content p {
+    font-size: 1rem;
+    opacity: 0.8;
+    font-weight: 300;
+    margin-bottom: 0.6em;
+}
+.content hr {
+    opacity: 0.6;
+    margin-bottom: 0.4em;
+}
+.callMe {
+    font-size: 0.8rem;
+}
