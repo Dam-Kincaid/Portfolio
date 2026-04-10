@@ -31,7 +31,7 @@
 .name {
     color: var(--text-color);
     text-transform: capitalize;
-    font-size: clamp(3.5rem, 5vw, 4.2rem);
+    font-size: clamp(3.2rem, 5vw, 4.2rem);
     font-weight: 500;
     line-height: 0.9;
     user-select: none;
@@ -43,7 +43,7 @@
     height: 0.2rem;
     background-color: var(--primary-color);
     border: none;
-    margin-bottom: 1vw;
+    margin-bottom: 1rem;
 }
 
 .social ul{
@@ -65,10 +65,11 @@
 }
 
 .skill {
-    font-size: clamp(1.5rem, 2.3vw, 2rem);
+    font-size: clamp(1.3rem, 2.3vw, 2rem);
     color: var(--text-color);
-    margin-bottom: 1.5vw;
+    margin-bottom: 1rem;
     letter-spacing: 1px;
+    line-height: normal;
 
     span {
         font-weight: 600;
@@ -112,3 +113,21 @@
 .b3 {grid-area: b3;}
 .b4 {grid-area: b4;}
 .b5 {grid-area: b5;}
+
+
+@media screen and (max-width: 768px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        scrollbar-width: none;
+        padding: 30px;
+    }
+    .box {
+        flex-shrink: 0;
+    }
+
+    .porfolio {
+        padding-left: 0;
+    }
+}
