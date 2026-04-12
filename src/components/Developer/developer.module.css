@@ -71,3 +71,36 @@
     width: 1px;
     background-color: var(--primary-color);
 }
+
+@media screen and (max-width: 768px) {
+    .skill {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8em;
+    }
+
+    .last {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+                'la sl la2'
+                'sh sh sh'
+                'la3 la3 la3';
+        place-items: center;
+        row-gap: 0.6em;
+    }
+    .last div:nth-child(2) {
+        height: 100%;
+    }
+    .last div:nth-child(4) {
+        width: 80%;
+        height: 1px;
+        grid-area: sh;
+        margin-top: 5px;
+    }
+    .last div:last-child {
+        grid-area: la3;
+    }
+
+}
